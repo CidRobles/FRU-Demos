@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fundraise Up: the new standard for online giving -->
+    <script>(function (w, d, s, n, a) {
+            if (!w[n]) {
+                var l = 'call,catch,on,once,set,then,track,openCheckout'
+                    .split(','), i, o = function (n) {
+                        return 'function' == typeof n ? o.l.push([arguments]) && o
+                            : function () { return o.l.push([n, arguments]) && o }
+                    }, t = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s); j.async = !0; j.src = 'https://cdn.fundraiseup.com/widget/' + a + '';
+                t.parentNode.insertBefore(j, t); o.s = Date.now(); o.v = 5; o.h = w.location.href; o.l = [];
+                for (i = 0; i < 8; i++)o[l[i]] = o(l[i]); w[n] = o
+            }
+        })(window, document, 'script', 'FundraiseUp', 'AJFRCVTA');
+        window.fundraiseup_livemode = false;
+
+    </script>
+    <!-- End Fundraise Up -->
+
+    <title>2024 Athletics Giving Challenge</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+    </style>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", serif;
+            background-color: #FAFAFA;
+            margin: 0;
+            color: #333;
+        }
+
+        .container {
+            margin: 0 auto;
+            max-width: calc(100% - 300px);
+        }
+
+        header {
+            position: sticky;
+            z-index: 999;
+            top: 0;
+            padding: 1.5rem;
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: start;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        header img {
+            width: 250px;
+            height: 26px;
+        }
+
+        section {
+            margin: 40px 0;
+            /* Increased space between sections */
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin: 20px 0;
+            color: #434343;
+        }
+
+        .columns {
+            display: flex;
+            gap: 20px;
+        }
+
+        .left-column {
+            flex: 7;
+        }
+
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%;
+            /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            flex: 3;
+            align-items: center;
+            justify-content: center;
+            background-color: #fefefe;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.25);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .placeholder {
+            background-color: #e0e0e0;
+            border: 1px dashed #ccc;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .menu {
+            margin-bottom: 20px;
+        }
+
+        .menu a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #0098CF;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .project-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem;
+        }
+
+        .project-item:hover {
+            border-radius: 5px;
+            box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.25);
+            background-color: #fefefe;
+        }
+
+        .about-section {
+            border: 1px solid #D9D9D9;
+            border-radius: 5px;
+            box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.25);
+            background-color: #fefefe;
+        }
+
+        .about-top {
+            border-bottom: 1px solid #D9D9D9;
+            margin-bottom: 20px;
+            padding: 1rem;
+        }
+
+        .about-title {
+            color: #0098CF;
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .about-bottom {
+            padding: 1rem;
+            padding-top: 0;
+        }
+
+        #projects .section-title,
+        #donors .section-title {
+            text-align: left;
+            /* Left-align "Projects" and "Donors" titles */
+        }
+
+        footer {
+            margin-top: 40px;
+            border-top: 1px solid #D5D5D5;
+            padding: 20px;
+            text-align: right;
+        }
+
+        footer a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: #0098CF;
+        }
+
+        .element-size {
+            color: #0098CF;
+            font-size: 40px;
+        }
+
+        #top-data {
+            background: rgb(33, 44, 100);
+            background: linear-gradient(315deg, rgba(33, 44, 100, 1) 0%, rgba(0, 132, 180, 1) 100%);
+            border-radius: 5px;
+            box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.25);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            gap: 1rem;
+            padding: 2rem;
+        }
+
+        .top-data-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .top-data-item h2 {
+            color: #fff;
+            font-weight: 400;
+            text-align: center;
+            font-size: 32px;
+            margin-top: 0;
+        }
+
+        iframe#XQQZPTUZ {
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+
+        @media(max-width:767px) {
+            header {
+                justify-content: center;
+            }
+
+            .container {
+                max-width: 100%;
+                padding: 1.25rem;
+            }
+
+            section {
+                margin: 20px 0;
+            }
+
+            .section-title {
+                margin-top: 0;
+                font-size: 1.75rem;
+            }
+
+            .columns {
+                flex-direction: column;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                margin-bottom: 24px;
+            }
+
+            #top-data {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                gap: 1.25rem;
+                padding: 1rem;
+            }
+
+            .top-data-item h2 {
+                font-size: 24px;
+                margin: 0.5rem 0;
+            }
+        }
+
+        @media(min-width:768px) and (max-width: 1023px) {
+
+            .container {
+                max-width: 100%;
+                padding: 0 2rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            #top-data {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                gap: 1.25rem;
+                padding: 1rem;
+            }
+
+            .top-data-item h2 {
+                font-size: 24px;
+                margin: 0.5rem 0;
+            }
+        }
+
+        @media(min-width:1024px) and (max-width:1400px) {
+            #top-data {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+                gap: 1.5rem;
+                padding: 2rem;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <img src="https://dlmrue3jobed1.cloudfront.net/uploads/school/JohnJayCollegeofCriminalJustice/JJC_Logo_Horiz__003_.jpg"
+            alt="John Jay College Logo">
+    </header>
+
+    <div class="container">
+        <section>
+            <h1 class="section-title">2024 Athletics Giving Challenge</h1>
+            <div class="columns">
+                <div class="left-column">
+                    <div class="video-container">
+                        <iframe width="840" height="472"
+                            src="https://www.youtube.com/embed/TZLDpANNmZA?si=IsVsg1qukmC-VwWl"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <div class="element-size">
+                            <p style="margin: 20px 0;"><a href="#XSEDQDBG" style="display: none"></a> Donors</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; align-items: center;">
+                        <a href="#XMDWMDED" style="display: none"></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="menu">
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+                <a href="#donors">Donors</a>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-item"><a href="#XFDFVEXJ" style="display: none"></a>
+                    <a href="#XCCHWUEZ" style="display: none"></a>
+                </div>
+                <div class="project-item"><a href="#XBAAUJJL" style="display: none"></a>
+                    <a href="#XCWTNTSV" style="display: none"></a>
+                </div>
+                <div class="project-item"><a href="#XRNQQZBN" style="display: none"></a>
+                    <a href="#XCGHMRDJ" style="display: none"></a>
+                </div>
+                <div class="project-item"><a href="#XCLEARGM" style="display: none"></a>
+                    <a href="#XHHCDRZA" style="display: none"></a>
+                </div>
+                <div class="project-item"><a href="#XCYGULBB" style="display: none"></a>
+                    <a href="#XEREAJFT" style="display: none"></a>
+                </div>
+                <div class="project-item"><a href="#XFUQMPGD" style="display: none"></a>
+                    <a href="#XRCMPNRL" style="display: none"></a>
+                </div>
+                <div class="project-item"><a href="#XZCJTBFM" style="display: none"></a>
+                    <a href="#XLZEAKUT" style="display: none"></a>
+                </div>
+                <div class="project-item"><a href="#XYZQNTHV" style="display: none"></a>
+                    <a href="#XBWRLSMQ" style="display: none"></a>
+                </div>
+                <div class="project-item"><a href="#XETBHVMD" style="display: none"></a>
+                    <a href="#XBFRCKBF" style="display: none"></a>
+                </div>
+                <div class="project-item"><a href="#XMYVBAXE" style="display: none"></a>
+                    <a href="#XTJMVFNE" style="display: none"></a>
+                </div>
+                <div class="project-item"><a href="#XCPVMNTH" style="display: none"></a>
+                    <a href="#XRWKLAXJ" style="display: none"></a>
+                </div>
+                <div class="project-item"><a href="#XEQCGEXQ" style="display: none"></a>
+                    <a href="#XAUHEQPD" style="display: none"></a>
+                </div>
+                <div class="project-item"><a href="#XZMLTQUU" style="display: none"></a>
+                    <a href="#XTBLNKER" style="display: none"></a>
+                </div>
+                <div class="project-item"><a href="#XCQMKVBV" style="display: none"></a>
+                    <a href="#XFKTELNM" style="display: none"></a>
+                </div>
+                <div class="project-item"><a href="#XGPCEYAA" style="display: none"></a>
+                    <a href="#XUXJUFGX" style="display: none"></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="about-section">
+                <div class="about-top">
+                    <h2 class="about-title">About</h2>
+                </div>
+                <div class="about-bottom">
+                    <p><strong>April 2024 marks the first-ever John Jay Athletics Giving Challenge!</strong> This month
+                        is all
+                        about engaging our Bloodhounds, past, present, and honorary. In the past decade, John Jay
+                        Athletics has
+                        transformed into a leading program in the City University of New York Athletic Conference
+                        (CUNYAC). We will
+                        lead you through this transformation in the coming weeks with updates on facility upgrades,
+                        scholar-athlete
+                        achievement, leadership in coaching, and more.</p>
+                    <p>Your support of John Jay Athletics is essential to propelling our teams to the next level and
+                        funding
+                        investments in team travel, technology, and equipment.</p>
+                    <p>During the John Jay Athletics Giving Challenge, we will have the month of April to reach our goal
+                        of 300
+                        donors. Thank you for your inspiring commitment to John Jay Athletics and our student-athletes.
+                    </p>
+                    <p><strong>Give today and join the Challenge!</strong> Go Bloodhounds.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="top-data">
+            <div class="top-data-item">
+                <h2>Top Projects</h2>
+                <a href="#XAYTDPFU" style="display: none"></a>
+            </div>
+            <div class="top-data-item">
+                <h2>Top Donations</h2>
+                <a href="#XQQZPTUZ" style="display: none"></a>
+            </div>
+            <div class="top-data-item">
+                <h2>Top Supporters</h2>
+                <a href="#XEZWNRBQ" style="display: none"></a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <a href="https://www.givecampus.com/terms">Terms</a>
+        <a href="https://www.givecampus.com/privacy">Privacy</a>
+        <a href="mailto:alumni@jjay.cuny.edu">Questions?</a>
+    </footer>
+</body>
+
+</html>

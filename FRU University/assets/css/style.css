@@ -1,0 +1,12 @@
+:root {
+    --fru-green:#2cb67b;
+}
+
+/* Navigation */
+nav#navigation {
+    background-color: var(--fru-green);
+}
+
+main #highlight {
+    
+}

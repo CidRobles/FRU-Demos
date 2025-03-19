@@ -1,0 +1,72 @@
+main {
+    background: none;
+    background-color: #fff;
+}
+
+main h1 {
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+table {
+    color: #666;
+}
+
+table th {
+    padding: 16px 12px;
+    text-align: left;
+    vertical-align: bottom;
+    font-size: .875rem;
+    font-weight: 400;
+    color: #999;
+    text-transform: uppercase;
+}
+
+table td {
+    padding: 16px 12px;
+    vertical-align: top;
+}
+
+.uk-button.wv-button-gray {
+    background-color: #808285;
+    color: #fff;
+    margin-right: 20px;
+    padding: 0 15px;
+    font-size: 14px;
+    border: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    line-height: 28px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .1s ease-in-out;
+    transition-property: color, background-color, border-color;
+    cursor: pointer;
+}
+
+.uk-button.wv-button-gray:hover {
+    background-color: #737578;
+}
+
+.uk-button.wv-button-orange {
+    background-color: #e34035;
+    color: #fff;
+    padding: 0 15px;
+    font-size: 14px;
+    border: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    line-height: 28px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .1s ease-in-out;
+    transition-property: color, background-color, border-color;
+    cursor: pointer;
+}
+
+.uk-button.wv-button-orange:hover {
+    background-color: #e02b1f;
+}

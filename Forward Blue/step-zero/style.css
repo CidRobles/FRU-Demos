@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+.text-green-80 {
+    color: #00c07b;
+}
+
+.text-fuchsia-80 {
+    color: #ff447c;
+}
+
+/* Step Zero */
+#FRU-step-zero-overlay {
+    font-family: "IBM Plex Sans", sans-serif !important;
+    background-color: rgba(0, 0, 0, 0.55);
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1010;
+    overscroll-behavior-y: none;
+    outline: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 16px;
+    display: none;
+}
+
+#FRU-step-zero-close {
+    position: fixed;
+    background-color: #e7e8ed;
+    color: #222832;
+    border-radius: 50%;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#FRU-step-zero-close:hover {
+    opacity: 0.9;
+}
+
+#FRU-step-zero-content {
+    max-width: 896px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 4rem;
+}
+
+#FRU-step-zero-left,
+#FRU-step-zero-right {
+    background-color: #fff;
+    border-radius: 16px;
+}
+
+#FRU-step-zero-left {
+    max-width: 516px;
+    margin-right: 20px;
+}
+
+.left-container {
+    padding: 20px 28px;
+    font-family: "IBM Plex Sans", sans-serif !important;
+}
+
+#FRU-step-zero-copy h1 {
+    font-size: 20px;
+    font-family: "IBM Plex Sans", sans-serif !important;
+    margin: 0;
+    color: #222832;
+}
+
+#FRU-step-zero-copy p {
+    margin-top: 12px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #222832;
+}
+
+#FRU-step-zero-left img#FRU-step-zero-campaign {
+    max-height: 289px;
+    width: 100%;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+#FRU-step-zero-left img#FRU-step-zero-logo {
+    max-height: 50px;
+    margin-bottom: 16px;
+}
+
+#FRU-step-zero-right {
+    min-width: 360px;
+    padding: 16px 32px;
+    padding-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.secure {
+    padding: 12px 0 28px 0;
+    display: flex;
+    align-items: center;
+}
+
+.secure span {
+    font-weight: 600;
+    font-size: 20px;
+    margin-left: 8px;
+    color: #555;
+}
+
+
+#FRU-step-zero-frequency {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #c7cdd6;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+#FRU-step-zero-frequency button {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+    min-height: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+#FRU-step-zero-frequency button svg {
+    margin-right: 4px;
+}
+
+#FRU-step-zero-frequency button span {
+    color: #222832;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#FRU-step-zero-frequency button:hover {
+    background: #f3f4fa;
+}
+
+#FRU-step-zero-frequency button.selected {
+    font-weight: 500;
+    background: #ebf1fc;
+    box-shadow: inset 0 0 0 2px #3371e6;
+    z-index: 2;
+    cursor: default;
+}
+
+#FRU-step-zero-frequency button.selected span {
+    font-weight: 500;
+}
+
+#FRU-step-zero-array {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+#array-once,
+#array-monthly {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+#array-once button,
+#array-monthly button {
+    width: 100%;
+    max-width: 30%;
+    border: 1px solid #c7cdd6;
+    border-radius: 8px;
+    background: none;
+    min-height: 45px;
+    font-size: 16px;
+}
+
+#array-once button:hover,
+#array-monthly button:hover {
+    background: #f3f4fa;
+}
+
+#array-once button.selected,
+#array-monthly button.selected {
+    font-weight: 500;
+    background: #ebf1fc;
+    box-shadow: inset 0 0 0 2px #3371e6;
+}
+
+#other-amount-once,
+#other-amount-monthly {
+    width: 100%;
+    border: 1px solid #c7cdd6;
+    border-radius: 8px;
+    min-height: 50px;
+    padding: 4px;
+    padding-left: 35px;
+    font-size: 24px;
+    color: #3371e6;
+    max-width: 100% !important;
+    box-sizing: border-box;
+}
+
+#other-amount-once:focus-visible,
+#other-amount-monthly:focus-visible {
+    outline-color: #3371e6;
+}
+
+.other-amount-container {
+    position: relative;
+    width: 100%;
+}
+
+.dollar-sign-icon {
+    position: absolute;
+    font-size: 16px;
+    line-height: 16px;
+    top: 17.5px;
+    left: 20px;
+}
+
+#FRU-step-zero-employment {
+    color: #222832;
+    margin-bottom: 12px;
+}
+
+#FRU-step-zero-employment h4 {
+    color: #222832;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+#FRU-step-zero-employment p {
+    color: #222832;
+    margin: 0;
+    margin-bottom: 12px;
+}
+
+#FRU-step-zero-employment-status {
+    border: 1px solid #c7cdd6;
+    border-radius: 4px;
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+#FRU-step-zero-employment-status-control {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    accent-color: rgb(0, 37, 94);
+}
+
+#FRU-step-zero-employment-data {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input#FRU-step-zero-employment-occupation,
+input#FRU-step-zero-employment-employer {
+    border: 1px solid #c7cdd6;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 44.5%;
+}
+
+#employment-data-error {
+    display: none;
+    color: darkred;
+    width: 100%;
+    margin-top: 8px;
+}
+
+#FRU-step-zero-donate,
+#FRU-step-zero-donate-static {
+    margin-top: auto;
+    background: none;
+    background-color: #3371e6;
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    min-height: 50px;
+}
+
+#FRU-step-zero-donate:hover,
+#FRU-step-zero-donate-static:hover {
+    background-color: #2e66cf;
+}
+
+@media(max-width: 915px) {
+    #FRU-step-zero-content {
+        max-width: 520px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #FRU-step-zero-left {
+        max-width: 100%;
+        margin: 0;
+        border-bottom: 1px solid #c7cdd6;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    #FRU-step-zero-right {
+        min-width: unset;
+        width: 100%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    #FRU-step-zero-frequency,
+    #FRU-step-zero-array,
+    #FRU-step-zero-premium,
+    #FRU-step-zero-donate {
+        max-width: 300px;
+    }
+
+    #FRU-step-zero-employment-data {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    input#FRU-step-zero-employment-occupation,
+    input#FRU-step-zero-employment-employer {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+#legal-link {
+    display: block;
+    margin-top: 1rem;
+    font-size: 14px;
+    text-decoration: underline;
+    color: #2e66cf;
+}

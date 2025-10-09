@@ -1,0 +1,8 @@
+/*
+ Quantcast measurement tag
+ Copyright (c) 2008-2022, Quantcast Corp.
+*/
+'use strict';(function(d,k,h){var l=function(a){var b=h.createElement("a");b.href=a;return b},m=[/^http[s]?:\/\/((adservice.google.*)|([^\/]*fls\.doubleclick\.net))\/.*~oref=(?<url>[^;\n]*)/,/^http[s]?:\/\/[^\/]*tealium.*\/.*page_url=(?<url>[^&]*)/],n=function(){if(k.top!==k.self){try{for(var a=0;a<m.length;a++){var b=h.location.href.match(m[a]);if(b&&b.groups.url){var c=decodeURIComponent(b.groups.url);break}}}catch(g){}return c?l(c):l(h.referrer)}return h.location},p=function(a,b,c){return a?"nc"===
+a?!b||!c||0>b.indexOf(c):"eq"===a?b===c:"sw"===a?0===b.indexOf(c):"ew"===a?(a=b.length-c.length,b=b.lastIndexOf(c,a),-1!==b&&b===a):"c"===a?0<=b.indexOf(c):!1:!1},f=function(a,b,c){var g=n().href;p(b,g,c)?a(g):a(!1)},e=function(a){return"array"==={}.toString.call(a).match(/\s([a-zA-Z]+)/)[1].toLowerCase()?{labels:a.join(",")}:{labels:""+a}};try{__qc("defaults",d,{labels:"_fp.event.Default"})}catch(a){}__qc.apply(null,["rules",[d,null,[[e,"_fp.event.Need Help"]],[[f,"c","/need-help"]]],[d,null,[[e,
+"_fp.event.About Us"]],[[f,"c","/about-us"]]],[d,null,[[e,"_fp.event.Contact Us"]],[[f,"c","/contact-us"]]],[d,null,[[e,"_fp.event.Site Land"]],[[function(a,b,c){var g=n().pathname;p(b,g,c)?a(g):a(!1)},"sw","/"]]],[d,null,[[e,"_fp.event.Get Involved"]],[[f,"c","/get-involved"]]],[d,null,[[e,"_fp.event.Donate"]],[[f,"c","/donate"]]],[d,null,[[e,"_fp.event.Our Faith"]],[[f,"c","/our-faith"]]],[d,null,[[e,"_fp.event.Locations"]],[[f,"c","/locations"]]],[d,null,[[e,"_fp.event.Make a Donation"]],[[f,"c",
+"make-a-donation"]]]])})("p-cjZVGTMuE5jUQ",window,document);

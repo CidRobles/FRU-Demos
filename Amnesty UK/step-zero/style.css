@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    --zero-border-color: #c7cdd6;
+    --zero-fru-blue: #3371e6;
+}
+
+.text-green-80 {
+    color: #00c07b;
+}
+
+.text-fuchsia-80 {
+    color: #ff447c;
+}
+
+/* Step Zero */
+#FRU-step-zero-overlay {
+    font-family: "IBM Plex Sans", sans-serif !important;
+    background-color: rgba(0, 0, 0, 0.55);
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999999999;
+    overscroll-behavior-y: none;
+    outline: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 16px;
+    display: none;
+}
+
+#FRU-step-zero-close {
+    position: fixed;
+    background-color: #e7e8ed;
+    color: #222832;
+    border-radius: 50%;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#FRU-step-zero-close:hover {
+    opacity: 0.9;
+}
+
+#FRU-step-zero-content {
+    max-width: 896px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 4rem;
+}
+
+#FRU-step-zero-left,
+#FRU-step-zero-right {
+    background-color: #fff;
+    border-radius: 16px;
+}
+
+#FRU-step-zero-left {
+    max-width: 516px;
+    margin-right: 20px;
+}
+
+.left-container {
+    padding: 20px 28px;
+    font-family: "IBM Plex Sans", sans-serif !important;
+}
+
+#FRU-step-zero-copy h1 {
+    font-size: 20px;
+    font-family: "IBM Plex Sans", sans-serif !important;
+    margin: 0;
+    color: #222832;
+}
+
+#FRU-step-zero-copy p {
+    margin-top: 12px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #222832;
+}
+
+#FRU-step-zero-left img#FRU-step-zero-campaign {
+    max-height: 289px;
+    width: 100%;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+#FRU-step-zero-left img#FRU-step-zero-logo {
+    max-height: 50px;
+    margin-bottom: 16px;
+}
+
+#FRU-step-zero-right {
+    min-width: 360px;
+    padding: 16px 32px;
+    padding-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.secure {
+    padding: 12px 0 28px 0;
+    display: flex;
+    align-items: center;
+}
+
+.secure span {
+    font-weight: 600;
+    font-size: 20px;
+    margin-left: 8px;
+    color: #555;
+}
+
+#FRU-step-zero-info {
+    width: 100%;
+    color: #222832;
+    margin-bottom: 12px;
+}
+
+#FRU-step-zero-info h4 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #222832;
+    margin: 0;
+    margin-bottom: 12px;
+}
+
+.question-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-bottom: 20px;
+}
+
+.question-container.checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.question-container label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.question-container.checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 12px;
+    accent-color: var(--zero-fru-blue);
+}
+
+.question-container.checkbox label {
+    display: block;
+    margin: 0;
+}
+
+#dob-question,
+#fundraiser-info {
+    display: none;
+}
+
+.question-container select {
+    width: 100%;
+    border: 1px solid var(--zero-border-color);
+    border-radius: 8px;
+    min-height: 50px;
+    padding: 4px 8px;
+}
+
+.question-container input[type="text"],
+.question-container input[type="date"] {
+    width: 100%;
+    border: 1px solid var(--zero-border-color);
+    border-radius: 8px;
+    min-height: 50px;
+    padding: 4px 8px;
+    outline-color: rgba(51, 113, 230, 0.5);
+}
+
+
+#dob-error,
+#age-error {
+    display: none;
+    color: darkred;
+    width: 100%;
+    margin-top: 8px;
+}
+
+#fundraiser-info {
+    gap: 10px;
+}
+
+#FRU-step-zero-donate,
+#FRU-step-zero-donate-static {
+    margin-top: auto;
+    background: none;
+    background-color: var(--zero-fru-blue);
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    min-height: 50px;
+    margin-top: auto;
+}
+
+#FRU-step-zero-donate:hover,
+#FRU-step-zero-donate-static:hover {
+    background-color: #2e66cf;
+}
+
+@media(max-width: 915px) {
+    #FRU-step-zero-content {
+        max-width: 520px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #FRU-step-zero-left {
+        max-width: 100%;
+        margin: 0;
+        border-bottom: 1px solid var(--zero-border-color);
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    #FRU-step-zero-right {
+        min-width: unset;
+        width: 100%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    #FRU-step-zero-info {
+        max-width: 300px;
+    }
+}

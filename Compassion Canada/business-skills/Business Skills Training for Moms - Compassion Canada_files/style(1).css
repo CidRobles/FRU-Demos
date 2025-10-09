@@ -1,0 +1,21 @@
+
+/* 
+country-content-item Block
+Front end (theme) CSS 
+*/
+
+.wp-block-cc-my-account-country-content-item .country-content-item-icon {
+	width: 75px;
+	float: left;
+	margin-top: 20px;
+}
+
+.wp-block-cc-my-account-country-content-item .country-content-item-icon span {
+	font-size: 48px;
+	color: #555d66;
+}
+
+.wp-block-cc-my-account-country-content-item .country-content-item-content {
+	width: calc(100% - 75px);
+	float: right;
+}

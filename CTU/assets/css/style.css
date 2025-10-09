@@ -1,0 +1,391 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --ctu-red: #CC303C;
+    --ctu-gray: #616365;
+    --ctu-yellow: #EBA123;
+    --ctu-blue: #6B80BF;
+    --ctu-medium-gray: #B2B0B5;
+    --ctu-light-gray: rgb(236, 235, 236);
+    --ctu-purple: #906C9C;
+    --ctu-dark-blue: #003461;
+    --ctu-green: #7AB800;
+    --font-lora: "Lora", serif;
+}
+
+/* Header */
+header {
+    background-color: var(--ctu-red);
+}
+
+/* Nav */
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.header-actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-actions .giving-day {
+    background-color: var(--ctu-yellow);
+    border-radius: 6px;
+    color: var(--ctu-light-gray);
+    text-decoration: none;
+    min-width: 180px;
+    min-height: 48px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* Logo */
+a.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a.logo img {
+    max-width: 360px;
+}
+
+/* Main */
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+section {
+    margin: 2rem auto !important;
+}
+
+.columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    max-width: 80%;
+    margin: 2rem auto;
+}
+
+.columns.reversed {
+    flex-direction: row-reverse;
+}
+
+.columns .content {
+    max-width: 60%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.content h2 {
+    display: block;
+    width: 100%;
+    font-family: var(--font-lora);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 125%;
+    margin-bottom: 18px;
+    color: var(--ctu-blue);
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 125%;
+    margin-bottom: 12px;
+    color: var(--ctu-gray);
+}
+
+a.donation-cta {
+    color: var(--ctu-light-gray);
+    font-size: 24px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 6px;
+    background-color: var(--ctu-red);
+    min-width: 300px;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 1rem;
+    transition: background 0.35s;
+    font-weight: 600;
+}
+
+a.donation-cta:hover {
+    transition: background 0.35s;
+    background-color: var(--ctu-yellow);
+}
+
+/* Banner */
+#banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    margin: 0 !important;
+}
+
+#banner-content {
+    background-color: var(--ctu-dark-blue);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--ctu-light-gray);
+    gap: 16px;
+    padding: 4rem 2rem;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+#banner-content h1 {
+    font-size: 42px;
+}
+
+#banner-content p {
+    font-size: 24px;
+    font-family: var(--font-lora);
+}
+
+#banner-content p span {
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* Video */
+section#video {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.video-copy {
+    max-width: 40%;
+}
+
+.video-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Faculty */
+#excellence {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Stats */
+section#stats {
+    max-width: 100%;
+    background-color: var(--ctu-dark-blue);
+    padding: 2rem 0;
+}
+
+.stats-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.stats-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stats-item span.data {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--ctu-yellow);
+}
+
+.stats-item p {
+    color: var(--ctu-light-gray);
+    text-align: center;
+    font-size: 18px;
+}
+
+#stats .content {
+    justify-content: center;
+    align-items: center;
+}
+
+#stats .content h2 {
+    color: var(--ctu-yellow);
+    text-align: center;
+}
+
+#stats .content p {
+    color: var(--ctu-light-gray);
+}
+
+
+/* Map */
+#notes-container {
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 120%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 120%);
+    height: 20vh;
+    overflow-y: auto;
+    border-radius: 6px;
+    padding: 0.75rem;
+    padding-left: 0;
+    width: 100%;
+}
+
+#notes-container h4 {
+    text-align: center;
+}
+
+.note {
+    border-radius: 6px;
+    background-color: rgba(236, 235, 236, 40%);
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.note strong {
+    font-family: var(--font-lora);
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.note p {
+    font-size: 14px;
+    margin: 0;
+    margin-top: 0.25rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--ctu-dark-blue);
+    color: var(--ctu-light-gray);
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
+}
+
+@media(max-width:767px) {
+    nav {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    a.logo img {
+        max-width: 300px;
+    }
+
+    .header-actions {
+        gap: 8px;
+    }
+
+    .header-actions .giving-day {
+        max-width: 50%;
+        min-width: unset;
+        padding: 0 16px;
+    }
+
+    #banner,
+    #banner-content {
+        min-height: 80vh;
+    }
+
+    #banner-content {
+        padding: 0 1rem;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    section#video {
+        flex-direction: column;
+    }
+
+    .video-copy {
+        max-width: 100%;
+    }
+
+    a.donation-cta {
+        min-width: unset;
+        max-width: 90%;
+    }
+
+    .columns {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        max-width: 100%;
+    }
+
+    .columns .content {
+        max-width: 80%;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: stretch;
+        max-width: 80%;
+        gap: 16px;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+
+    #stats .content p {
+        text-align: center;
+    }
+}

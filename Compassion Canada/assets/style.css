@@ -1,0 +1,8 @@
+article.card {
+    min-height: 420px;
+}
+
+article.card footer div.btn-wrap.dis-flex.gap-1.pad-2,
+body[class*=shop] .goc-card .btn-wrap{
+    justify-content: space-between;
+}

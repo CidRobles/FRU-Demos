@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+}
+
+header,
+aside,
+section,
+footer {
+    border: 1px solid lightslategray;
+    border-radius: 5px;
+    padding: 1em;
+    margin: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "aside section section section";
+    align-content: stretch;    
+}
+
+aside {
+    grid-area: aside;
+}
+
+section {
+    grid-area: section;
+}
+
+#consent-banner {
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    padding: 1rem;
+    background-color: lightyellow;
+    border: 1px solid;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+#consent-banner .controls {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#consent-banner .controls button {
+    appearance: none;
+    border: 1px solid;    
+    border-radius: 5px;
+    background-color: lightgray;
+    font-weight: 500;    
+    min-width: 150px;
+    padding: 1rem 0;
+    font-size: 16px;
+    cursor: pointer;
+}

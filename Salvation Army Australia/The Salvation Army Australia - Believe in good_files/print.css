@@ -1,0 +1,45 @@
+/* salvos.org.au website print css */
+body {
+	font: 13px arial, helvetica, sans-serif;
+	color:#000;
+	line-height:1.4em;
+	background: #fff none;
+	
+}
+
+a{
+	text-decoration:none;
+	}
+	
+
+.wrapper:before{
+	content:url(../images/tsr-logo.png);
+	padding-left:3em;
+	}
+
+html {
+    min-width: none;
+}
+#content-meta, .header-right,nav, footer .salvos-services, footer .information, #back-top, aside,#crumbs,form,#comments-wrapper,.share-news, article #crumbs, footer .footer-link, footer .pc-site, #header.mobile-header, .wrapper #site-header,#navigation{
+	display:none;
+	
+	
+	}
+	
+	
+.wrapper, #site-header, #content, .content-wrapper, #content article {
+	width:100%;
+		
+		}
+		
+img{
+	max-width:50%;
+	
+	}
+	
+.wrapper footer{border-bottom: 23px solid #f4f4f4;}
+	
+.wrapper{
+margin-bottom:0;	
+	
+	}

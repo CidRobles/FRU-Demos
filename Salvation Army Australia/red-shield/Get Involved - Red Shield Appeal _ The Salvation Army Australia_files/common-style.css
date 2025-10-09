@@ -1,0 +1,28 @@
+body.search .search-results-text img{
+	display: inline-block;
+    margin-bottom: -0.1rem;
+	margin-left: 4px;
+	float: none;
+	border: 0;
+}
+body.search div.search-results-block{
+	min-height: 120px;
+}
+
+.news-item-text h3 img.lock-icon {
+	display: inline-block;
+    margin-bottom: -0.1rem;
+	margin-left: 4px;
+	float: none;
+	border: 0;
+}
+h3 a.lock-icon{
+	background: url('../images/lock.png') no-repeat;
+	background-position: right;
+    padding-right: 20px;
+}
+div.g-recaptcha{
+	float: left;
+	width: 100%;
+	margin-left: 27%;
+}

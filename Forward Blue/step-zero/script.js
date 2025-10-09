@@ -1,4 +1,5 @@
 // Modal state, do not modify
+var urlParams = new URLSearchParams(window.location.search)
 var zeroState = {
     form: {
         id: '',
@@ -371,3 +372,9 @@ mainCTA.addEventListener('click', function (e) {
 //     console.log('Opening static modal')
 //     renderStepZero('static')
 // })
+
+window.onload = function() {
+    if (urlParams.has('step') && urlParams.get('step') == 'zero') {
+        renderStepZero('ai')
+    }
+}

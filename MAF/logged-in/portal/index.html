@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Aviation Fellowship Portal</title>
+    <!-- Fundraise Up: the new standard for online giving -->
+    <script>
+        (function (w, d, s, n, a) {
+            if (!w[n]) {
+                var l = 'call,catch,on,once,set,then,track,openCheckout'
+                    .split(','), i, o = function (n) {
+                        return 'function' == typeof n ? o.l.push([arguments]) && o
+                            : function () { return o.l.push([n, arguments]) && o }
+                    }, t = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s); j.async = !0; j.src = 'https://cdn.fundraiseup.com/widget/' + a + '';
+                t.parentNode.insertBefore(j, t); o.s = Date.now(); o.v = 5; o.h = w.location.href; o.l = [];
+                for (i = 0; i < 8; i++)o[l[i]] = o(l[i]); w[n] = o
+            }
+        })(window, document, 'script', 'FundraiseUp', 'AGSDXPRN');
+        window.fundraiseup_livemode = false;
+    </script>
+    <!-- End Fundraise Up -->
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../../logged-in/index.html">
+                <img src="https://give.maf.org/file-asset/Give_LogoWhite?v=1&amp;height=300&amp;width=300"
+                    alt="Mission Aviation Fellowship">
+            </a>
+            <span id="salutation">Welcome back</span>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <section id="donor-email" style="display: none;"></section>
+            <section>
+                <h1>Manage my subscriptions</h1>
+                <div class="chk-container">
+                    <label for="letter"><input type="checkbox" name="subscriptions" id="letter"> Subscribe to "Prayer
+                        Letter"</label>
+                    <label for="news"><input type="checkbox" name="subscriptions" id="news"> Subscribe to "MAF
+                        News"</label>
+                </div>
+                <button class="save">
+                    Save
+                </button>
+            </section>
+            <section>
+                <h1>Communication preferences</h1>
+                <div class="chk-container">
+                    <label for="email"><input type="checkbox" name="subscriptions" id="email"> I want to receive email
+                        communications</label>
+                    <label for="texts"><input type="checkbox" name="subscriptions" id="texts"> Send me texts with
+                        updates about MAF</label>
+                </div>
+                <button class="save">
+                    Save
+                </button>
+            </section>
+            <section>
+                <h1>Manage donations</h1>
+                <a href="https://demo-maf.donorsupport.co/test/" id="fru-portal">Manage my donations</a>                
+            </section>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+        * {
+            font-family: "Mulish", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --maf-red: #ce202e;
+            --maf-blue: #004073;
+        }
+
+        header {
+            background-color: var(--maf-blue);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #salutation {
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin: 2rem 0;
+            background-color: #fcfcfc;
+            border-radius: 4px;
+            border: 1px solid #cfcfcf;
+            padding: 1rem;
+        }
+
+        .chk-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        section button.save {
+            cursor: pointer;
+            appearance: none;
+            background-color: var(--maf-red);
+            color: #fff;
+            border-radius: 4px;
+            border: none;
+            padding: 0.5rem 1rem;
+            min-width: 150px;
+        }
+
+        #fru-portal {
+            display: block;
+            cursor: pointer;
+            appearance: none;
+            margin-top: 1rem;
+            background-color: var(--maf-blue);
+            color: #fff;
+            border-radius: 4px;
+            border: none;
+            padding: 0.5rem 1rem;
+            width: 300px;
+            text-align: center;
+            text-decoration: none;
+            margin-top: 1rem;            
+        }
+    </style>
+    <script>
+        var urlParams = new URLSearchParams(window.location.search)
+
+        var donors = [
+            {
+                id: '001',
+                fname: 'Ravi',
+                lname: 'Dogan',
+                email: 'ravi.dogan@gmail.com',
+                portal: 'https://demo-maf.donorsupport.co/test/'
+            },
+            {
+                id: '002',
+                fname: 'Cesar',
+                lname: 'Robles',
+                email: 'cesar.robles@fundraiseup.com',
+                portal: 'https://demo-maf.donorsupport.co/test/'
+            }
+        ]
+
+        if (urlParams.has('email')) {
+            var donor = donors.find(donor => (donor.email == urlParams.get('email')))
+            if (donor != null) {
+                document.getElementById('salutation').textContent = `Welcome back ${donor.fname} ${donor.lname}`
+                document.getElementById('donor-email').textContent = `${donor.email}`
+                document.getElementById('donor-email').style.display = 'block'                
+            }
+        }
+
+        FundraiseUp.on('checkoutOpen', function (details) {
+            console.log(details);
+        });
+    </script>
+</body>
+
+</html>

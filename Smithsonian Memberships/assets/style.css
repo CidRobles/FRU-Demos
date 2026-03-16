@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cinzel:wght@400..900&display=swap');
+
+* {
+    margin: 0;
+    font-family: "Barlow", sans-serif;
+}
+
+header {
+    background-color: #0f1820;
+    padding: 1rem 2rem;
+}
+
+header svg {
+    color: #fff;
+    max-width: 160px;
+    min-height: 45px;
+}
+
+.logo-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.divider {
+    border-left: 1px solid #fff;
+    margin: 0 2rem;
+}
+
+main {
+    margin-bottom: 5rem;
+}
+
+section {
+    max-width: 80%;
+    margin: 1rem auto;
+    background-color: #fcfcfc;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+hr {
+    margin: 1rem 0;
+}
+
+select#memberships-select {
+    min-height: 45px;
+    font-size: 20px;
+    font-weight: 700;
+    min-width: 300px;
+    margin-bottom: 1rem;
+    padding: 0 12px;
+}
+
+#friends,
+#castle,
+#james {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    display: none;
+}
+
+#friends {
+    display: flex;
+}
+
+.details {
+    margin-bottom: 1rem;
+}
+
+.details p {
+    margin-bottom: 0.5rem;
+}
+
+.membership-benefits {
+    background-color: #fff;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 1rem;
+    width: 100%;
+    max-width: 49%;
+    box-sizing: border-box;
+}
+
+.membership-benefits ul {
+    margin-top: 1rem;
+}
+
+.buttons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button {
+    border: none;
+    color: #0f1820;
+    border-radius: 4px;
+    padding: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button.join {
+    background-color: #ffcd00;
+}
+
+button.gift {
+    background-color: #82d5fa;
+}
+
+#gift-membership-details {
+    margin-top: 1rem;
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.input-row input,
+.input-row select {
+    height: 40px;
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+.disclaimers {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.disclaimers p {
+    margin-bottom: 1rem;
+}
+
+#error-message {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    background-color: #ff9d9d;
+    border: 1px solid darkred;
+    border-radius: 4px;
+    padding: 0.5rem;
+}

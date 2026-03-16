@@ -10740,8 +10740,8 @@ function OptanonWrapper() { }
         <div id="content">
 
 
-            <div class="c-donate-box c-donate-box--appeal-home" data-component="donate-box" style="display: flex;">
-                <div class="c-donate-box__image c-donate-box__image--appeal-home" style="max-width: 50%;">
+            <div class="c-donate-box c-donate-box--appeal-home" data-component="donate-box">
+                <div class="c-donate-box__image c-donate-box__image--appeal-home">
                     <picture>
                         <source
                             data-savepage-srcset="https://static.redcross.org.uk/-/media/BritishRedCross/Appeal-images/Gaza-Crisis-Appeal/Gaza-desktop-landing-4_1170x1400.ashx?w=585&hash=C8631BD41571BA104CA3617642F02011&extension=webp"
@@ -10753,9 +10753,31 @@ function OptanonWrapper() { }
                     </picture>
                 </div>
 
-                <div id="embedded-form" style="max-width: 50%; width: 100%; display: flex; justify-items: center; align-items: center; justify-content: center;">
-                    <a href="#XGWDSVZD" style="display: none"></a>
-                </div>
+                <form action="/Appeal/HandleForm" autocomplete="off" class="c-donate-box__form js-donate-box-form"
+                    data-component="form-validation" data-parsley-ui-enabled="false" id="form-donate-module"
+                    method="post" novalidate="" target="_parent"><input name="__RequestVerificationToken" type="hidden"
+                        value="xxP_KLp3Cg5gJQWCtfl3ILrxgbzWWe3zg6_0FtQO0riu1M2AhegmQPcR0TOP9fTaHP-XyGpVIQA6wifwM5X5wUecsBw1">
+                    <input type="hidden" name="appeal-id" value="gaza-crisis-appeal">
+                    <input type="hidden" name="appeal-name" value="Gaza Crisis Appeal">
+                    <input type="hidden" name="sorp-code" value="R/1022/50081/P9199">
+                    <input type="hidden" name="sg-caveat"
+                        value="The Gaza Crisis appeal will support people in areas affected and those potentially affected in the future by this crisis. Gift Aid claimed on donations received in response to this appeal will be used to fund the whole of our work. In the event there are surplus funds raised for this appeal these will be used for the general charitable purposes of the British Red Cross.">
+                    <input type="hidden" name="rg-caveat"
+                        value="The Gaza Crisis appeal will support people in areas affected and those potentially affected in the future by this crisis. Gift Aid claimed on donations received in response to this appeal will be used to fund the whole of our work. In the event there are surplus funds raised for this appeal these will be used for the general charitable purposes of the British Red Cross. Please note: Your regular donation will be supporting the Gaza Crisis Appeal until 31st December 2026, after the 31st December your regular donation will support people wherever the need is greatest.">
+                    <input type="hidden" name="rg-form-type" value="">
+                    <input type="hidden" name="appeal-telephone-number" value="0300 004 0338">
+                    <input type="hidden" name="appeal-income-type" value="1022">
+                    <input type="hidden" name="amount" class="js-donation-amount" value="10">
+                    <input type="hidden" name="paymentFrequency" class="js-donation-frequency" value="monthly">
+                    <div class="c-donate-box__form-header">
+                        <h1 class="c-donate-box__form-header-title">Donate to the Gaza Crisis Appeal</h1>
+                        <h2 class="c-donate-box__form-header-subtitle js-donate-dynamic-header">Help people in Gaza,
+                            donate today</h2>
+                    </div>
+                    <div class="c-donate-box__tabs js-donate-box">
+                        <a href="#XGWDSVZD" style="display: none"></a>
+                    </div>
+                </form>
             </div>
 
 
@@ -11248,26 +11270,7 @@ function OptanonWrapper() { }
     <script data-savepage-type="text/javascript" type="text/plain" id="" charset=""></script>
     <script data-savepage-type="text/javascript" type="text/plain" id="" charset=""></script>
     <noscript><img src="https://ib.adnxs.com/pixie?pi=917df04c-0a5e-4936-87f7-63c7dcce3f16&amp;e=PageView&amp;script=0"
-            width="1" height="1" style="display:none"></noscript><iframe
-        srcdoc="<html><head>
-<style id=&quot;savepage-cssvariables&quot;>
-  :root {
-  }
-</style>
-        </head><body><iframe sandbox=&quot;allow-scripts&quot; srcdoc=&quot;<!DOCTYPE html><html><head><base href=&amp;quot;https://www.googletagmanager.com/static/service_worker/56n0/sw_iframe.html?origin=https%3A%2F%2Fdonate.redcross.org.uk&amp;quot;>
-  <link rel=&amp;quot;shortcut icon&amp;quot; href=&amp;quot;data:image/x-icon;,&amp;quot; type=&amp;quot;image/x-icon&amp;quot;>
-
-<style id=&amp;quot;savepage-cssvariables&amp;quot;>
-  :root {
-  }
-</style>
-              </head>
-<body>
-  <script data-savepage-type=&amp;quot;&amp;quot; type=&amp;quot;text/plain&amp;quot;></script>
-
-</body></html>&quot; data-savepage-crossorigin=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; data-savepage-src=&quot;https://www.googletagmanager.com/static/service_worker/56n0/sw_iframe.html?origin=https%3A%2F%2Fdonate.redcross.org.uk&quot; src=&quot;&quot; style=&quot;display: none; visibility: hidden;&quot; data-savepage-key=&quot;0-0-0&quot;></iframe></body></html>"
-        data-savepage-sameorigin="" height="0" width="0" style="display: none; visibility: hidden;"
-        data-savepage-key="0-0"></iframe>
+            width="1" height="1" style="display:none"></noscript>
     <script data-savepage-type="text/javascript" type="text/plain" id="" charset=""></script>
     <div id="onetrust-consent-sdk" data-nosnippet="true">
         <div class="onetrust-pc-dark-filter ot-hide ot-fade-in"></div>
@@ -11532,14 +11535,7 @@ function OptanonWrapper() { }
                 <!-- Cookie subgroup container --><!-- Vendor list link --><!-- Cookie lost link --><!-- Toggle HTML element --><!-- Checkbox HTML --><!-- plus minus--><!-- Arrow SVG element --><!-- Accordion basic element --><span
                     class="ot-scrn-rdr" aria-atomic="true"
                     aria-live="polite"></span><!-- Vendor Service container and item template -->
-            </div><iframe srcdoc="<html><head>
-<style id=&quot;savepage-cssvariables&quot;>
-  :root {
-  }
-</style>
-            </head><body></body></html>" data-savepage-sameorigin="" class="ot-text-resize" sandbox="allow-same-origin"
-                title="onetrust-text-resize" style="position: absolute; top: -50000px; width: 100em;" aria-hidden="true"
-                data-savepage-key="0-1"></iframe>
+            </div>
         </div>
     </div><img class="ywa-10000"
         data-savepage-src="https://sp.analytics.yahoo.com/sp.pl?a=10000&d=Mon%2C%2030%20Jun%202025%2014%3A03%3A28%20GMT&n=6&b=Gaza%20Crisis%20Appeal%20%7C%20British%20Red%20Cross&.yp=10191999&f=https%3A%2F%2Fdonate.redcross.org.uk%2Fappeal%2Fgaza-crisis-appeal%3Fc_name%3DGaza%2520Crisis%2520Appeal%26c_source%3DHomepage%2520Promo%2520Box%26c_medium%3DInternal%26c_creative%3Drescue%2520rubble%26c_code%3D175149%26adg%3DBRC%2520Site&e=http%3A%2F%2F127.0.0.1%3A5500%2F&enc=UTF-8&yv=1.16.6&tagmgr=gtm"
@@ -11547,15 +11543,7 @@ function OptanonWrapper() { }
     <div id="batBeacon106477785737" style="width: 0px; height: 0px; display: none; visibility: hidden;"><img
             id="batBeacon495108730414" width="0" height="0" alt=""
             data-savepage-src="https://bat.bing.com/action/0?ti=5294849&Ver=2&mid=9ed9fc2a-9623-47ec-8659-eb38b7b117fc&bo=3&sid=08e01a5055b311f0bfd9098bf23c6893&vid=1e02d21052c011f09118bdcf4c769d48&vids=0&msclkid=N&pi=918639831&lg=en-US&sw=1920&sh=1080&sc=24&tl=Gaza%20Crisis%20Appeal%20%7C%20British%20Red%20Cross&p=https%3A%2F%2Fdonate.redcross.org.uk%2Fappeal%2Fgaza-crisis-appeal%3Fc_name%3DGaza%2520Crisis%2520Appeal%26c_source%3DHomepage%2520Promo%2520Box%26c_medium%3DInternal%26c_creative%3Drescue%2520rubble%26c_code%3D175149%26adg%3DBRC%2520Site&r=http%3A%2F%2F127.0.0.1%3A5500%2F&lt=943&evt=pageLoad&sv=1&asc=G&cdb=AQET&rn=980208"
-            src="" style="width: 0px; height: 0px; display: none; visibility: hidden;"></div><iframe srcdoc="<html><head>
-<style id=&quot;savepage-cssvariables&quot;>
-  :root {
-  }
-</style>
-        </head><body></body></html>" data-savepage-sameorigin="" id="_hjSafeContext_94888356" title="_hjSafeContext"
-        tabindex="-1" aria-hidden="true" data-savepage-src="about:blank" src=""
-        style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"
-        data-savepage-key="0-2"></iframe>
+            src="" style="width: 0px; height: 0px; display: none; visibility: hidden;"></div>
     <style type="text/css">
         #monthly-panel .c-donate-box__payment-methods {
             -ms-grid-columns: auto !important;
@@ -11617,18 +11605,7 @@ function OptanonWrapper() { }
             display: none;
             margin-top: .7rem
         }
-    </style><iframe sandbox="allow-scripts" srcdoc="<!DOCTYPE html><html><head><base href=&quot;https://x.adroll.com/pxl/iframe_content.html?adroll_fpc=21ec45db1d17b3587333f2cd38ab7697-1750964555094&amp;flg=1&amp;pv=11816233442.750824&amp;arrfrr=https%3A%2F%2Fdonate.redcross.org.uk%2Fappeal%2Fgaza-crisis-appeal%3Fc_name%3DGaza%2520Crisis%2520Appeal%26c_source%3DHomepage%2520Promo%2520Box%26c_medium%3DInternal%26c_creative%3Drescue%2520rubble%26c_code%3D175149%26adg%3DBRC%2520Site&amp;advertisable=SLYB2SHRPFC23KQJ3CUYPI&quot;><meta charset=&quot;UTF-8&quot;>
-<style id=&quot;savepage-cssvariables&quot;>
-  :root {
-  }
-</style>
-        </head><body marginwidth=&quot;0&quot; marginheight=&quot;0&quot;>
-</body></html>" data-savepage-crossorigin="" id="adroll_slg"
-        data-savepage-src="https://x.adroll.com/pxl/iframe_content.html?adroll_fpc=21ec45db1d17b3587333f2cd38ab7697-1750964555094&flg=1&pv=11816233442.750824&arrfrr=https%3A%2F%2Fdonate.redcross.org.uk%2Fappeal%2Fgaza-crisis-appeal%3Fc_name%3DGaza%2520Crisis%2520Appeal%26c_source%3DHomepage%2520Promo%2520Box%26c_medium%3DInternal%26c_creative%3Drescue%2520rubble%26c_code%3D175149%26adg%3DBRC%2520Site&advertisable=SLYB2SHRPFC23KQJ3CUYPI"
-        src="" title="no readable content" frameborder="0" marginwidth="0" marginheight="0"
-        allow="join-ad-interest-group"
-        style="position: absolute; width: 0px; height: 0px; border: 0px; padding: 0px; margin: 0px 0px 0px -1000px;"
-        data-savepage-key="0-3"></iframe>
+    </style>
 </body>
 
 </html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        * {
+            font-family: "Lato", sans-serif;
+        }
+
+        header {
+            padding: 1rem;
+            box-shadow: 0 1px 10px -5px #000;
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+
+        h1,
+        p {
+            text-align: center;
+        }
+
+        .input-row {
+            margin-bottom: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .input-row input[type="text"] {
+            min-height: 32px;
+            max-width: 320px;
+        }
+
+        input[type="submit"] {
+            background-color: #ec1400;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 2rem;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+
+        footer {
+            margin-top: auto;
+            color: #FFF;
+            background-color: #77726b;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <img src="https://cdn.aarp.net/content/dam/aarp/uxdia/logos/foundation/foundation-logo-colo.svg"
+                alt="AARP Foundation">
+        </a>
+    </header>
+    <main>
+        <section class="container">
+            <h1>Thank You, <span id="name"></span></h1>
+            <p>Your <span id="frequency"></span> gift of $<span id="amount"></span> has been processed</p>
+            <p>Please consider subscribing to our mailers</p>
+            <form>
+                <div class="input-row">
+                    <label for="supporterFirstName">
+                        First Name
+                    </label>
+                    <input type="text" name="supporterFirstName" id="supporterFirstName">
+                </div>
+                <div class="input-row">
+                    <label for="supporterLastName">
+                        Last Name
+                    </label>
+                    <input type="text" name="supporterLastName" id="supporterLastName">
+                </div>
+                <div class="input-row">
+                    <label for="supporterEmail">
+                        Email Address
+                    </label>
+                    <input type="text" name="supporterEmail" id="supporterEmail">
+                </div>
+                <div class="input-row checkbox">
+                    <h4>Select your interests</h4>
+                    <div class="checkbox-row">
+                        <label for="webletter"><input type="checkbox" name="webletter" id="webletter">Webletter</label>                        
+                    </div>
+                    <div class="checkbox-row">
+                        <label for="daily"><input type="checkbox" name="daily" id="daily">Daily mail</label>                        
+                    </div>
+                    <div class="checkbox-row">
+                        <label for="boletin"><input type="checkbox" name="boletin" id="boletin">Boletín</label>                        
+                    </div>
+                </div>
+                <div class="input-row">
+                    <input type="submit" value="Subscribe">
+                </div>
+
+            </form>
+        </section>
+    </main>
+    <footer>
+        <center>
+            <p>&copy; 2025 AARP Foundation</p>
+        </center>
+    </footer>
+    <script>
+        var urlParams = new URLSearchParams(window.location.search)
+
+        if (urlParams.has('monthly')) {
+            if (urlParams.get('monthly') == 'true') {
+                document.getElementById('frequency').textContent = 'monthly'
+            } else {
+                document.getElementById('frequency').textContent = 'one-time'
+            }
+        }
+
+        if (urlParams.has('amount')) {
+            document.getElementById('amount').textContent = urlParams.get('amount')
+        }
+
+        if (urlParams.has('supporterFirstName')) {
+            document.getElementById('name').textContent = urlParams.get('supporterFirstName')
+            document.getElementById('supporterFirstName').value = urlParams.get('supporterFirstName')
+        }
+
+        if (urlParams.has('supporterLastName')) {
+            document.getElementById('supporterLastName').value = urlParams.get('supporterLastName')
+        }
+
+        if (urlParams.has('supporterEmail')) {
+            document.getElementById('supporterEmail').value = decodeURIComponent(urlParams.get('supporterEmail'))
+        }
+
+    </script>
+</body>
+
+</html>

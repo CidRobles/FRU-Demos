@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     function clearThirdPartyInfo() {
         thirdPartyFirst.value = ''
-        thirdPartyLast.value = ''        
+        thirdPartyLast.value = ''
         payload.customFields.notificationFirstName = ''
         payload.customFields.notificationLastName = ''
     }
@@ -153,6 +153,8 @@ window.addEventListener('DOMContentLoaded', function () {
                 addressRow.style.display = 'block'
                 thirdPartyFirst.focus()
                 selfNotification.style.display = 'none'
+                document.querySelector('#address-container h3').textContent = 'NOTIFICANT ADDRESS'
+                document.querySelector('label[for="third-party-first"]').textContent = 'Enter the information of the notificant'
             } else if (radio.id == 'notify-honoree') {
                 clearThirdPartyInfo()
                 document.getElementById('third-party').style.display = 'flex'
@@ -161,6 +163,8 @@ window.addEventListener('DOMContentLoaded', function () {
                 document.getElementById('third-party-email').style.display = 'block'
                 addressRow.style.display = 'block'
                 selfNotification.style.display = 'none'
+                document.querySelector('#address-container h3').textContent = 'HONOREE ADDRESS'
+                document.querySelector('label[for="third-party-first"]').textContent = 'Enter the honoree information'
             }
 
             radio.parentElement.classList.add('selected')
@@ -187,62 +191,63 @@ window.addEventListener('DOMContentLoaded', function () {
         }
 
         var selectedNotification = document.querySelector('#notify label.selected')
+        if (selectedNotification != null) {
+            if (selectedNotification.getAttribute('for') == 'notify-third') {
+                if (thirdPartyFirst.value == '' || thirdPartyLast.value == '') {
+                    errorMessage.textContent = 'Please provide the name of the person to be notified about this gift'
+                    errorMessage.classList.add('errors')
+                    thirdPartyFirst.focus()
+                    return
+                }
 
-        if (selectedNotification.getAttribute('for') == 'notify-third') {
-            if (thirdPartyFirst.value == '' || thirdPartyLast.value == '') {
-                errorMessage.textContent = 'Please provide the name of the person to be notified about this gift'
-                errorMessage.classList.add('errors')
-                thirdPartyFirst.focus()
-                return
+                payload.customFields.notificationFirstName = thirdPartyFirst.value
+                payload.customFields.notificationLastName = thirdPartyLast.value
             }
 
-            payload.customFields.notificationFirstName = thirdPartyFirst.value
-            payload.customFields.notificationLastName = thirdPartyLast.value
-        }
+            // Address must not be empty
+            if (selectedNotification.getAttribute('for') == 'notify-honoree' || selectedNotification.getAttribute('for') == 'notify-third') {
 
-        // Address must not be empty
-        if (selectedNotification.getAttribute('for') == 'notify-honoree' || selectedNotification.getAttribute('for') == 'notify-third') {
+                if (thirdPartyEmail.value == '') {
+                    errorMessage.textContent = 'Please provide a valid email address to notify about this gift'
+                    errorMessage.classList.add('errors')
+                    thirdPartyEmail.focus()
+                    return
+                }
 
-            if (thirdPartyEmail.value == '') {
-                errorMessage.textContent = 'Please provide a valid email address to notify about this gift'
-                errorMessage.classList.add('errors')
-                thirdPartyEmail.focus()
-                return
+                if (addressLine.value == '') {
+                    errorMessage.textContent = 'Address line is required'
+                    errorMessage.classList.add('errors')
+                    addressLine.focus()
+                    return
+                }
+
+                if (city.value == '') {
+                    errorMessage.textContent = 'City is required'
+                    errorMessage.classList.add('errors')
+                    city.focus()
+                    return
+                }
+
+                if (state.value == '') {
+                    errorMessage.textContent = 'State is required'
+                    errorMessage.classList.add('errors')
+                    return
+                }
+
+                if (zip.value == '') {
+                    errorMessage.textContent = 'ZIP Code is required'
+                    errorMessage.classList.add('errors')
+                    zip.focus()
+                    return
+                }
+
+                payload.customFields.notificationEmail = thirdPartyEmail.value
+                payload.customFields.notificationAddressLine = addressLine.value
+                payload.customFields.notificationCity = city.value
+                payload.customFields.notificationState = state.value
+                payload.customFields.notificationZip = zip.value
+
             }
-
-            if (addressLine.value == '') {
-                errorMessage.textContent = 'Address line is required'
-                errorMessage.classList.add('errors')
-                addressLine.focus()
-                return
-            }
-
-            if (city.value == '') {
-                errorMessage.textContent = 'City is required'
-                errorMessage.classList.add('errors')
-                city.focus()
-                return
-            }
-
-            if (state.value == '') {
-                errorMessage.textContent = 'State is required'
-                errorMessage.classList.add('errors')
-                return
-            }
-
-            if (zip.value == '') {
-                errorMessage.textContent = 'ZIP Code is required'
-                errorMessage.classList.add('errors')
-                zip.focus()
-                return
-            }
-
-            payload.customFields.notificationEmail = thirdPartyEmail.value
-            payload.customFields.notificationAddressLine = addressLine.value
-            payload.customFields.notificationCity = city.value
-            payload.customFields.notificationState = state.value
-            payload.customFields.notificationZip = zip.value
-
         }
 
 
